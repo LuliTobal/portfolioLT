@@ -2,6 +2,22 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.titulo{
+    font-size: 50px;
+    color: #FD6842;
+}
+
+.subtitulos{
+    color: #BAB759;
+    font-size: 30px;
+    text-align: center;
+}
+
+.parrafos{
+    font-size: 20px;
+    color: #3F3E1C;
+}
+
 nav{
     background-color: #FFF9F9;
 }
@@ -13,22 +29,55 @@ nav{
     list-style: none;
 }
 
-button{
+.linksRedes{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linksRedes button{
     display: flex;
     align-items: center;
     background-color: #FFF9F9;
     border-radius: 5px;
-    border: solid #FFF9F9;
+    border: none;
     color: #548749;
     padding: 5px;
     gap: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .imgBtn{
     height: 25px;
+    filter: invert(48%) sepia(35%) saturate(533%) hue-rotate(63deg) brightness(90%) contrast(91%);
+}
+
+
+.herramientas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 140px;
+    row-gap: 3%;
+}
+
+.bajadas{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    gap: 25px;
+    border: solid 2px #FD6842;
+    border-radius: 5px;
+    color: #FD6842;
+    font-size: 14px;
+    padding: 5px 5px 5px 20px;
 }
 
 .imgSkills{
     height: 40px;
+    filter: invert(50%) sepia(84%) saturate(505%) hue-rotate(322deg) brightness(94%) contrast(112%);
 }
 
 .siglo{
