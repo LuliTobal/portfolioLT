@@ -1,3 +1,4 @@
+/* ////////////////////////////GENERALES/////////////////////////*/
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -11,12 +12,22 @@
     color: #BAB759;
     font-size: 30px;
     text-align: center;
+    margin: 50px;
 }
 
 .parrafos{
     font-size: 20px;
     color: #3F3E1C;
+    margin-top: 50px;
+    text-align: justify;
 }
+
+.imgBtn{
+    height: 25px;
+    filter: invert(48%) sepia(35%) saturate(533%) hue-rotate(63deg) brightness(90%) contrast(91%);
+}
+
+/* ////////////////////////////NAV/////////////////////////*/
 
 nav{
     background-color: #FFF9F9;
@@ -29,44 +40,79 @@ nav{
     list-style: none;
 }
 
+/* ////////////////////////////SECCION HOLA!/////////////////////////*/
+
+.hola{
+    display: flex;
+    align-items: center;
+    padding: 90px;
+    gap: 70px;
+}
+
+.imgPerfil{
+   width: 25%;
+   margin: 10px 50px;
+}
+
+.titulo, .enfoque, .parrafos{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.enfoque{
+    color: #BAB759;
+    font-size: 30px;
+    text-align:left;
+}
+
 .linksRedes{
     width: 40%;
     display: flex;
     align-items: center;
+    padding: 10px 30px;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .linksRedes button{
+    width: auto;
     display: flex;
     align-items: center;
     background-color: #FFF9F9;
     border-radius: 5px;
     border: none;
     color: #548749;
-    padding: 5px;
+    padding: 10px 15px;
     gap: 10px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.imgBtn{
-    height: 25px;
-    filter: invert(48%) sepia(35%) saturate(533%) hue-rotate(63deg) brightness(90%) contrast(91%);
+/* ////////////////////////////SECCION SOBRE MI/////////////////////////*/
+
+.sobreMi{
+    padding: 0 140px ;
 }
 
+/* ////////////////////////////SECCION MIS SKILLS/////////////////////////*/
+
+.skills{
+    padding: 70px 140px;
+}
 
 .herramientas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 140px;
-    row-gap: 3%;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 5%;
+    row-gap: 20%;
+    padding: 50px 0;
 }
 
 .bajadas{
     display: flex;
     align-items: center;
-    width: 15%;
+    width: auto;
     gap: 25px;
     border: solid 2px #FD6842;
     border-radius: 5px;
@@ -94,4 +140,8 @@ nav{
 
 .agencia{
     background-color: #ebb304;
+}
+
+.egg{
+    background-color: #ffffff;
 }
