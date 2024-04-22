@@ -126,6 +126,27 @@ nav{
     filter: invert(50%) sepia(84%) saturate(505%) hue-rotate(322deg) brightness(94%) contrast(112%);
 }
 
+/* ////////////////////////////SECCION FORMACIONES/////////////////////////*/
+
+.formacion{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 140px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.formacionCard{
+    width: 25%;
+    margin: 20px;
+}
+
+.formacionCard img{
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
 .siglo{
     background-color: #026756;
 }
