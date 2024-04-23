@@ -31,13 +31,17 @@
 
 nav{
     background-color: #FFF9F9;
+    padding: 10px 100px;
 }
 
 .itemsNavBar{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     color: #548749;
     list-style: none;
+    padding: 0;
+    margin: 8px 0;
 }
 
 /* ////////////////////////////SECCION HOLA!/////////////////////////*/
@@ -131,12 +135,16 @@ nav{
 .formacion{
     display: flex;
     flex-wrap: wrap;
-    padding: 140px;
+    padding: 100px 140px;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .formacionCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     width: 25%;
     margin: 20px;
 }
@@ -147,8 +155,34 @@ nav{
     transition: transform 0.3s, opacity 0.3s;
 }
 
+.formacionCard:hover img {
+    opacity: 0.0;
+}
+
+.formacionCard p {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(113, 232, 73);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.formacionCard:hover p {
+    opacity: 1;
+}
+
 .siglo{
     background-color: #026756;
+    align-items: center;
 }
 
 .alura{
