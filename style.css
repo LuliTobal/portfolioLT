@@ -147,37 +147,48 @@ nav{
     overflow: hidden;
     width: 25%;
     margin: 20px;
+
+    /* Ajusta el margen según sea necesario */
+    overflow: hidden;
+
+    position: relative;
 }
 
 .formacionCard img{
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s, opacity 0.3s;
+    /*transition: transform 0.3s, opacity 0.3s;*/
+    transition: filter 0.3s;
 }
 
 .formacionCard:hover img {
     opacity: 0.0;
+    /*filter: grayscale(100%);*/
 }
 
-.formacionCard p {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(113, 232, 73);
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.formacionCard:hover p {
+.formacionCard:hover .overlay {
+    align-items: center;
     opacity: 1;
+}
+
+.overlay {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    /*Fondo gris semi-transparente */
+    color: #fff;
+    /* Color del texto */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    /* Inicialmente invisible */
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s;
+    width: 100%;
 }
 
 .siglo{
@@ -200,3 +211,4 @@ nav{
 .egg{
     background-color: #ffffff;
 }
+
