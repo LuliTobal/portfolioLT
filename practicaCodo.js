@@ -1,36 +1,36 @@
 //Leer dia y mes de nacimiento y calcular signo zodíaco//
 
-let dia = parseInt(prompt("ingrese el dia de su nacimiento"));
-let mes = parseInt(prompt("ingrese el mes de su nacimiento"));
-let signo = '';
+// let dia = parseInt(prompt("ingrese el dia de su nacimiento"));
+// let mes = parseInt(prompt("ingrese el mes de su nacimiento"));
+// let signo = '';
 
-switch (mes) {
-    case 1:
-        if (dia < 22){
-            signo = 'capricornio';
-        }else{
-            signo = 'acuario';
-        }
-        break;
-    case 2:
-        if (dia < 22){
-            signo = 'acuario';
-        }else{
-            signo = 'picis';
-        }
-        break;
-    case 2:
-        if (dia < 22){
-            signo = 'picis';
-        }else{
-            signo = 'aries';
-        }
-        break;
-    default:
-        break;
-}
-document.write('<h1>tu signo es' + signo + '</h1>');
-alert('tu signo es ' + signo);
+// switch (mes) {
+//     case 1:
+//         if (dia < 22){
+//             signo = 'capricornio';
+//         }else{
+//             signo = 'acuario';
+//         }
+//         break;
+//     case 2:
+//         if (dia < 22){
+//             signo = 'acuario';
+//         }else{
+//             signo = 'picis';
+//         }
+//         break;
+//     case 2:
+//         if (dia < 22){
+//             signo = 'picis';
+//         }else{
+//             signo = 'aries';
+//         }
+//         break;
+//     default:
+//         break;
+// }
+// document.write('<h1>tu signo es' + signo + '</h1>');
+// alert('tu signo es ' + signo);
 
 // Escribir los números enteros entre 10 y 20 
 // Escriba los numeros pares de 0 al 20.
@@ -52,3 +52,6 @@ alert('tu signo es ' + signo);
 //Programar la funcion potencia()
 
 // Validar que la edad de una persona se> 0 y
+
+// PRUEBA DE JS PARA ALURA
+//document.querySelector('input[type=tel]');

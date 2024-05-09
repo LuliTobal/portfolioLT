@@ -1,11 +1,13 @@
 /* ////////////////////////////GENERALES/////////////////////////*/
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
 }
 
 .titulo{
     font-size: 50px;
     color: #FD6842;
+    font-weight: 700;
 }
 
 .subtitulos{
@@ -13,13 +15,27 @@
     font-size: 30px;
     text-align: center;
     margin: 50px;
+    font-weight: 700;
 }
 
 .parrafos{
     font-size: 20px;
     color: #3F3E1C;
     margin-top: 50px;
+    /*width: 100%;*/
     text-align: justify;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.textFormacion{
+    font-size: 16px;
+    color: #fff;
+}
+
+.overlay p:nth-child(odd) {
+    font-weight: 700;   
+    margin-top: 8px; 
 }
 
 .imgBtn{
@@ -45,11 +61,16 @@ nav{
 }
 
 /* ////////////////////////////SECCION HOLA!/////////////////////////*/
+.textoHola{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 .hola{
     display: flex;
     align-items: center;
-    padding: 90px;
+    padding: 5% 7%;
     gap: 70px;
 }
 
@@ -64,16 +85,19 @@ nav{
 }
 
 .enfoque{
+    width: 100%;
     color: #BAB759;
     font-size: 30px;
-    text-align:left;
+    text-align: left;
+    font-weight: 500;
 }
 
 .linksRedes{
     width: 40%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 10px 30px;
+    margin-top: 10px;
     justify-content: space-between;
     gap: 20px;
 }
@@ -172,12 +196,13 @@ nav{
 }
 
 .overlay {
-    align-items: center;
+    align-content: center;
+    /*align-items: center;*/
     background: rgba(0, 0, 0, 0.5);
     /*Fondo gris semi-transparente */
     color: #fff;
     /* Color del texto */
-    display: flex;
+    /*display: flex;*/
     height: 100%;
     justify-content: center;
     left: 0;
@@ -212,3 +237,37 @@ nav{
     background-color: #ffffff;
 }
 
+/* Media query para pantallas de hasta 600px (móviles pequeños) */
+@media only screen and (max-width: 600px) {
+    .hola{
+        display: flex;
+        flex-direction: column;
+        padding: 5% 7%;
+        gap: 70px;
+    }
+
+    .herramientas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        justify-items: center;
+        gap: 10px;
+        padding: 50px 0;
+    }
+
+    .bajadas{
+        display: flex;
+        align-items: center;
+        width: 150px;
+        gap: 25px;
+        border: solid 2px #FD6842;
+        border-radius: 5px;
+        color: #FD6842;
+        font-size: 14px;
+        padding: 5px 5px 5px 20px;
+    }
+    /* Estilos específicos para pantallas pequeñas */
+}
+/* //////////////////COLOR PARA NOCTURNO///////////
+ background-color: #191919;*/
