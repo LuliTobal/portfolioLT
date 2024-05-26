@@ -5,21 +5,21 @@
 }
 
 .titulo{
-    font-size: 50px;
+    font-size: 6vw;
     color: #FD6842;
     font-weight: 700;
 }
 
 .subtitulos{
     color: #BAB759;
-    font-size: 30px;
+    font-size: 2vw;
     text-align: center;
     margin: 30px auto 50px auto;
     font-weight: 700;
 }
 
 .parrafos{
-    font-size: 16px;
+    font-size: 18px;
     color: #3F3E1C;
     margin-top: 50px;
     text-align: justify;
@@ -60,6 +60,10 @@ nav{
 }
 
 /* ////////////////////////////SECCION HOLA!/////////////////////////*/
+main{
+    background: linear-gradient(#FFF9F9, #EEEED2);
+}
+
 .textoHola{
     display: flex;
     flex-direction: column;
@@ -86,7 +90,7 @@ nav{
 .enfoque{
     width: 100%;
     color: #BAB759;
-    font-size: 30px;
+    font-size: 2.1vw;
     text-align: left;
     font-weight: 500;
 }
@@ -158,7 +162,7 @@ nav{
 .formacion{
     display: flex;
     flex-wrap: wrap;
-    padding: 100px 140px;
+    padding: 80px 140px;
     justify-content: center;
     gap: 30px;
 }
@@ -236,10 +240,73 @@ nav{
     background-color: #ffffff;
 }
 
+/*////////////////////////////////////MI EXPERIENCIA///////////////////////////////////////////////////////*/
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: 80px 140px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.experienciaCard{
+    width: 100%;
+    display: flex;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+
+.experienciaCard:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.experienciaCard:nth-child(even){
+    flex-direction: row;
+}
+
+.experienciaCard img{
+    width: 40%;
+}
+
+.detalleExperiencia{
+    width: 60%;
+    padding-left: 50px;
+    align-content: center;
+    line-height: 150%;
+}
+
+.detalleExperiencia p:first-child{
+    font-weight: 500;
+}
+
+.detalleExperiencia a:first-of-type button{
+    font-size: 14px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #548749;
+    padding: 5px;
+    min-width: 20%;
+
+}
+
+.detalleExperiencia a:nth-of-type(2) button{
+    font-size: 14px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #548749;
+    padding: 5px;
+    min-width: 20%;
+    color: #FFF9F9;
+}
+
+
 /*///////////////////// FORM CONTACTO /////////////////////////*/
 
 .formContacto{
-    padding: 0 7%;
+    padding: 0 7% 30px 7%;
     display: flex;
     gap: 10%;
 }
@@ -249,14 +316,35 @@ nav{
 }
 
 .infoContacto{
+    margin-top: 30px;
     width: 100%;
-    background-color: #EBEBC5 ;
-    border-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoContacto input, textarea{
+    width: 60%;
+    border-radius: 7px;
+    border: none;
+    height: auto;
+    padding: 10px;
 }
 
 .formularioContact{
     width: 100%;
     align-items: center;
+}
+
+.contactoBtn{
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: #548749;
+    color:#FFF9F9;
+    font-weight: 500;
+    font-size: 16px;
 }
 /*
 .formularioContact label, input{
@@ -264,6 +352,30 @@ nav{
     background-color: #EBEBC5 ;
     border-style: none;
 }*/
+
+
+/*////////////////////////////////////////FOOTER TIME//////////////////////////////////////*/
+.elPie{
+    height: 100px ;
+    align-content: center;
+    background-color: #EBEBC5;
+}
+
+.infoMensajeria{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.itemLista{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.itemLista p{
+    margin: 5px;
+}
 
 /* Media query para pantallas de hasta 600px (móviles pequeños) */
 @media only screen and (max-width: 600px) {
