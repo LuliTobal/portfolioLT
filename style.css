@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 .titulo{
     font-size: 6vw;
     color: #FD6842;
@@ -32,7 +36,7 @@
     color: #fff;
 }
 
-.overlay p:nth-child(odd) {
+.cardForm p:nth-child(odd) {
     font-weight: 700;   
     margin-top: 8px; 
 }
@@ -119,6 +123,14 @@ main{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.linksRedes button:hover{
+    background-color: #548749;
+    color: #FFF9F9;
+    .imgBtn{
+        filter: invert(96%) sepia(4%) saturate(236%) hue-rotate(314deg) brightness(98%) contrast(108%);
+    }
+}
+
 /* ////////////////////////////SECCION SOBRE MI/////////////////////////*/
 
 .sobreMi{
@@ -193,12 +205,12 @@ main{
     /*filter: grayscale(100%);*/
 }
 
-.formacionCard:hover .overlay {
+.formacionCard:hover .cardForm {
     align-items: center;
     opacity: 1;
 }
 
-.overlay {
+.cardForm {
     align-content: center;
     /*align-items: center;*/
     background: rgba(0, 0, 0, 0.5);
