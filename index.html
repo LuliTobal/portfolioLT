@@ -205,17 +205,22 @@
             <h3 class="subtitulos">CONTACTAME</h3>
             <div class="formContacto">
                 <img src="./assets/view-social-media-concept-with-items.jpg" alt="">
-                <form action="" class="formularioContact">
+                <form action="" class="formularioContact" id="formularioContact">
                     <p class="parrafos">¿Querés contactarme?
                         <br><br class="parrafos">Complete el siguiente formulario y me pondré en contacto lo antes posible.
                     </p>
-                       <div class="infoContacto">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
-                            <input type="email" id="email" name="email" placeholder="Mail de contacto"><br>
-                            <input type="text" id="asunto" name="asunto" placeholder="Asunto"><br>
-                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Introduzca su mensaje"></textarea><br>
-                            <button type="submit" class="contactoBtn">Enviar mensaje</button>
-                        </div>
+                    <div class="infoContacto">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <div id="errorMessages1" class="error"></div><br>
+                        <input type="email" id="email" name="email" placeholder="Mail de contacto">
+                        <div id="errorMessages2" class="error"></div><br>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto">
+                        <div id="errorMessages3" class="error"></div><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Introduzca su mensaje"></textarea>
+                        <div id="errorMessages4" class="error"></div><br>
+                        <input type="submit" value="Enviar mensaje" class="contactoBtn">
+                        <!-- <button type="submit" class="contactoBtn">Enviar mensaje</button> -->
+                    </div>
                 </form>
             </div>    
         </section>
@@ -238,6 +243,6 @@
             </ul>
         </div>
     </footer>
-<!-- <script src="practicaCodo.js"></script> -->
+    <script src="./practicaCodo.js"></script>
 </body>
 </html>
