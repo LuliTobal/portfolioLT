@@ -1,7 +1,8 @@
 /* ////////////////////////////GENERALES/////////////////////////*/
-*{
+body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
+
 }
 
 a{
@@ -18,17 +19,18 @@ a{
     color: #BAB759;
     font-size: 2vw;
     text-align: center;
-    margin: 30px auto 50px auto;
+    margin: 3% auto 3% auto;
     font-weight: 700;
 }
 
 .parrafos{
-    font-size: 18px;
+    font-size: 1.5vw;
     color: #3F3E1C;
     margin-top: 50px;
     text-align: justify;
     max-width: 100%;
     word-wrap: break-word;
+    line-height: 22px
 }
 
 .textFormacion{
@@ -49,22 +51,37 @@ a{
 /* ////////////////////////////NAV/////////////////////////*/
 
 nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #FFF9F9;
-    padding: 10px 100px;
+    padding: 1% 8%;
+    z-index: 1000;
 }
 
 .itemsNavBar{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: #548749;
     list-style: none;
     padding: 0;
-    margin: 8px 0;
+    margin: 1% 0;
+    text-decoration: none;
+}
+
+
+.itemsNavBar li a{
+    color: #548749;
+}
+
+nav a:hover{
+    color: #f42b04;
 }
 
 /* ////////////////////////////SECCION HOLA!/////////////////////////*/
 main{
+    margin-top: 7vh;
     background: linear-gradient(#FFF9F9, #EEEED2);
 }
 
@@ -77,7 +94,7 @@ main{
 .hola{
     display: flex;
     align-items: center;
-    padding: 5% 7%;
+    padding: 2% 7%;
     gap: 70px;
 }
 
@@ -134,13 +151,13 @@ main{
 /* ////////////////////////////SECCION SOBRE MI/////////////////////////*/
 
 .sobreMi{
-    padding: 0 140px ;
+    padding: 2% 8% ;
 }
 
 /* ////////////////////////////SECCION MIS SKILLS/////////////////////////*/
 
 .skills{
-    padding: 70px 140px;
+    padding: 2% 8%;
 }
 
 .herramientas{
@@ -156,12 +173,19 @@ main{
     display: flex;
     align-items: center;
     width: auto;
+    min-width: 160px;
     gap: 25px;
-    border: solid 2px #FD6842;
+    border: solid 1px #FD6842;
     border-radius: 5px;
     color: #FD6842;
     font-size: 14px;
-    padding: 5px 5px 5px 20px;
+    padding: 2% 5%;
+    box-shadow: 0 2px 4px rgba(253, 104, 66, 0.6);
+}
+
+.bajadas-texto{
+    justify-content: center;
+    padding: 7%;
 }
 
 .imgSkills{
@@ -174,7 +198,7 @@ main{
 .formacion{
     display: flex;
     flex-wrap: wrap;
-    padding: 80px 140px;
+    padding: 2% 8%;
     justify-content: center;
     gap: 30px;
 }
@@ -186,23 +210,19 @@ main{
     overflow: hidden;
     width: 25%;
     margin: 20px;
-
-    /* Ajusta el margen según sea necesario */
     overflow: hidden;
-
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .formacionCard img{
     max-width: 100%;
     height: auto;
-    /*transition: transform 0.3s, opacity 0.3s;*/
     transition: filter 0.3s;
 }
 
 .formacionCard:hover img {
     opacity: 0.0;
-    /*filter: grayscale(100%);*/
 }
 
 .formacionCard:hover .cardForm {
@@ -212,18 +232,13 @@ main{
 
 .cardForm {
     align-content: center;
-    /*align-items: center;*/
-    background: rgba(0, 0, 0, 0.5);
-    /*Fondo gris semi-transparente */
+    background: rgba(0, 0, 0, 0.5); /*Fondo gris semi-transparente */
     color: #fff;
-    /* Color del texto */
-    /*display: flex;*/
     height: 100%;
     justify-content: center;
     left: 0;
     right: 0;
-    opacity: 0;
-    /* Inicialmente invisible */
+    opacity: 0; /* Inicialmente invisible */
     padding: 5px;
     position: absolute;
     top: 0;
@@ -258,7 +273,7 @@ main{
     flex-direction: column;
     align-items: center;
     display: flex;
-    padding: 80px 140px;
+    padding: 2% 8%;
     justify-content: center;
     gap: 30px;
 }
@@ -280,6 +295,8 @@ main{
 
 .experienciaCard img{
     width: 40%;
+    height:fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .detalleExperiencia{
@@ -293,18 +310,8 @@ main{
     font-weight: 500;
 }
 
-.detalleExperiencia a:first-of-type button{
-    font-size: 14px;
-    margin: 10px 5px;
-    border-radius: 5px;
-    border: 1px solid #548749;
-    padding: 5px;
-    min-width: 20%;
-
-}
-
-.detalleExperiencia a:nth-of-type(2) button{
-    font-size: 14px;
+.btn-repositorio{
+    font-size: 1vw;
     margin: 10px 5px;
     border-radius: 5px;
     border: none;
@@ -313,12 +320,37 @@ main{
     min-width: 20%;
     color: #FFF9F9;
 }
+    
+.btn-repositorio:hover{
+    border: 1px solid #548749;
+    color: #548749;
+    background-color: #FFF9F9;
+}
 
+.btn-demo{
+    font-size: 1vw;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #548749;
+    padding: 5px;
+    min-width: 20%;
+
+}
+
+.btn-demo:hover{
+    background-color: #FD6842;
+    border: 1px solid #FD6842;
+    color: #FFF9F9;
+}
 
 /*///////////////////// FORM CONTACTO /////////////////////////*/
 
+.contacto{
+    padding: 2% 8%;
+}
+
 .formContacto{
-    padding: 0 7% 30px 7%;
+    padding: 2% 0 2% 0;
     display: flex;
     gap: 10%;
 }
@@ -360,22 +392,14 @@ main{
 }
 
 .error{
-    /* width: 60%; */
-    /* align-self: self-end; */
     color: red;
     padding: 5px 7px;
 }
-/*
-.formularioContact label, input{
-    width: 100%;
-    background-color: #EBEBC5 ;
-    border-style: none;
-}*/
 
 
 /*////////////////////////////////////////FOOTER TIME//////////////////////////////////////*/
 .elPie{
-    height: 100px ;
+    height: auto;
     align-content: center;
     background-color: #EBEBC5;
 }
@@ -396,37 +420,201 @@ main{
     margin: 5px;
 }
 
-/* Media query para pantallas de hasta 600px (móviles pequeños) */
+/*/////////////////////////////////////////////PUNTOS DE QUIEBRE///////////////////////////////////////*/
+
+/* Media query para pantallas de hasta 600px (pequeñas) */
 @media only screen and (max-width: 600px) {
+    .subtitulos, .enfoque{
+        font-size: 5.2vw;
+    }
+
+    .parrafos{
+        font-size: 3.2vw;
+        margin-top: 6%;
+    }
+
     .hola{
         display: flex;
         flex-direction: column;
         padding: 5% 7%;
-        gap: 70px;
+    }
+
+    .imgPerfil{
+        display: none;
+    }
+    
+    .linksRedes{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        padding: 1%;
+        margin-top: 3%;
+        gap: 2%;
+    }
+
+    .linksRedes button{
+        display: inline-flex;
+        padding: 9% 15%;
+    }
+
+    .linksRedes .imgBtn{
+        display: none;
     }
 
     .herramientas{
-        display: flex;
+        width: 100%;
+        display: inline-flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content:space-around;
+        justify-content:space-between;
         justify-items: center;
-        gap: 10px;
-        padding: 50px 0;
+        padding: 5% 0;
     }
 
     .bajadas{
-        display: flex;
-        align-items: center;
-        width: 150px;
-        gap: 25px;
-        border: solid 2px #FD6842;
-        border-radius: 5px;
-        color: #FD6842;
-        font-size: 14px;
-        padding: 5px 5px 5px 20px;
+        min-width: 40%;
+        align-content: center;
+        justify-content:space-around;
+        padding: 2%;
+        margin: 1%;
+        gap: 3%;
+        box-shadow: none;
     }
-    /* Estilos específicos para pantallas pequeñas */
+
+    .bajadas-textos{
+        display: none;
+    }
+
+    .hobbies .imgSkills{
+        height: 30px;
+    }
+
+    .pantalla-s{
+        border: none;
+        min-width: 20%;
+    }
+
+    .soft{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .formacion{
+        gap: 10%;
+    }
+    
+    .formacionCard{
+        flex-direction: row;
+        width: 90%;
+        margin: 5%;
+        overflow: none;
+        box-shadow:none;
+        gap: 10%;
+    }
+    
+    .formacionCard img{
+        max-width: 30%;
+        transition: none;
+    }
+    
+    .formacionCard:hover img {
+        display: none;
+    }
+    
+    .formacionCard:hover {
+        display: none;
+    }
+    
+    .cardForm {
+        background: none;
+        height: auto;
+        opacity: 1;
+        padding: 1%;
+        position: relative;
+    }
+
+    .siglo, .alura, .domestika, .agencia, .egg{
+        background-color:#ffffff00;
+    }
+
+    .textFormacion{
+        font-size: 3.2vw;
+        color: #3F3E1C;
+    }
+
+    .experiencia{
+        gap: 3%;
+    }
+    
+    .experienciaCard{
+        margin-top: 10%;
+    }
+
+    .experienciaCard img{
+        display: none;
+    }
+    
+    .detalleExperiencia{
+        font-size: 3.2vw;
+        width: 100%;
+        padding: 3%;
+    }
+
+    .detalleExperiencia p{
+        margin: 3% 0;
+    }
+    
+    .btn-repositorio, .btn-demo{
+        font-size: 3.1vw;
+        margin: 10px 5px;
+        padding: 2%;
+        min-width: 40%;
+    }
+    
+    .formContacto{
+        padding: 2% 0 2% 0;
+        flex-direction: column;
+        gap: 7%;
+    }
+    
+    .img-contacto{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .img-contacto img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 70%;
+    }
+
+    .infoContacto{
+        margin-top: 4%;
+        align-items: center;
+    }
+    
+    .infoContacto input, textarea{
+        width: 90%;
+        padding: 3%;
+    }
+
+    .contactoBtn{
+        padding: 2%;
+        font-size: 3.2vw;
+        max-width: 35%;
+    }
+
+    .infoMensajeria{
+        flex-direction: column;
+    }
+
+    .itemLista{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+    }
+
 }
-/* //////////////////COLOR PARA NOCTURNO///////////
- background-color: #191919;*/
