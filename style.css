@@ -167,19 +167,20 @@ main{
     column-gap: 5%;
     row-gap: 20%;
     padding: 50px 0;
+    /*grid-auto-flow:column;*/
 }
 
 .bajadas{
     display: flex;
     align-items: center;
-    width: auto;
-    min-width: 160px;
-    gap: 25px;
+    width:auto;
+    min-width: 180px;
+    gap: 10%;
     border: solid 1px #FD6842;
     border-radius: 5px;
     color: #FD6842;
-    font-size: 14px;
-    padding: 2% 5%;
+    font-size: 1.2vw;
+    padding: 5%;
     box-shadow: 0 2px 4px rgba(253, 104, 66, 0.6);
 }
 
@@ -189,7 +190,7 @@ main{
 }
 
 .imgSkills{
-    height: 40px;
+    height: 4.5vw;
     filter: invert(50%) sepia(84%) saturate(505%) hue-rotate(322deg) brightness(94%) contrast(112%);
 }
 
@@ -350,28 +351,36 @@ main{
 }
 
 .formContacto{
-    padding: 2% 0 2% 0;
+    padding: 2% 0;
     display: flex;
     gap: 10%;
 }
 
-.formContacto img{
-    width: 30%;
+.img-contacto{
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+}
+
+.img-contacto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .infoContacto{
-    margin-top: 30px;
+    margin-top: 4%;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .infoContacto input, textarea{
-    width: 60%;
+    width: 80%;
     border-radius: 7px;
     border: none;
     height: auto;
-    padding: 10px;
+    padding: 2%;
 }
 
 .formularioContact{
@@ -380,15 +389,19 @@ main{
 }
 
 .contactoBtn{
-    width: 30%;
+    width: 40% !important;
     height: auto;
-    padding: 10px;
+    padding: 1%;
     border-radius: 7px;
     border: none;
     background-color: #548749;
     color:#FFF9F9;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.5vw;
+}
+
+.contactoBtn:hover{
+    background-color: #FD6842;
 }
 
 .error{
@@ -400,6 +413,7 @@ main{
 /*////////////////////////////////////////FOOTER TIME//////////////////////////////////////*/
 .elPie{
     height: auto;
+    min-height: 140px;
     align-content: center;
     background-color: #EBEBC5;
 }
@@ -410,6 +424,7 @@ main{
     list-style: none;
     justify-content: space-evenly;
 }
+
 .itemLista{
     display: flex;
     align-items: center;
@@ -424,123 +439,21 @@ main{
 
 /* Media query para pantallas de hasta 600px (pequeñas) */
 @media only screen and (max-width: 600px) {
-    .subtitulos, .enfoque{
-        font-size: 5.2vw;
-    }
 
     .parrafos{
         font-size: 3.2vw;
-        margin-top: 6%;
-    }
-
-    .hola{
-        display: flex;
-        flex-direction: column;
-        padding: 5% 7%;
     }
 
     .imgPerfil{
         display: none;
     }
-    
-    .linksRedes{
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        padding: 1%;
-        margin-top: 3%;
-        gap: 2%;
-    }
 
-    .linksRedes button{
-        display: inline-flex;
-        padding: 9% 15%;
-    }
-
-    .linksRedes .imgBtn{
-        display: none;
-    }
-
-    .herramientas{
-        width: 100%;
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        justify-items: center;
-        padding: 5% 0;
-    }
-
-    .bajadas{
-        min-width: 40%;
-        align-content: center;
-        justify-content:space-around;
-        padding: 2%;
-        margin: 1%;
-        gap: 3%;
-        box-shadow: none;
-    }
-
-    .bajadas-textos{
-        display: none;
-    }
-
-    .hobbies .imgSkills{
-        height: 30px;
-    }
-
-    .pantalla-s{
-        border: none;
-        min-width: 20%;
-    }
-
-    .soft{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+    .imgSkills{
+        height: 10vw;
     }
 
     .formacion{
         gap: 10%;
-    }
-    
-    .formacionCard{
-        flex-direction: row;
-        width: 90%;
-        margin: 5%;
-        overflow: none;
-        box-shadow:none;
-        gap: 10%;
-    }
-    
-    .formacionCard img{
-        max-width: 30%;
-        transition: none;
-    }
-    
-    .formacionCard:hover img {
-        display: none;
-    }
-    
-    .formacionCard:hover {
-        display: none;
-    }
-    
-    .cardForm {
-        background: none;
-        height: auto;
-        opacity: 1;
-        padding: 1%;
-        position: relative;
-    }
-
-    .siglo, .alura, .domestika, .agencia, .egg{
-        background-color:#ffffff00;
-    }
-
-    .textFormacion{
-        font-size: 3.2vw;
-        color: #3F3E1C;
     }
 
     .experiencia{
@@ -603,7 +516,7 @@ main{
 
     .contactoBtn{
         padding: 2%;
-        font-size: 3.2vw;
+        font-size: 3.4vw;
         max-width: 35%;
     }
 
@@ -615,6 +528,168 @@ main{
         display: flex;
         flex-direction: column;
         margin: 2%;
+    }
+
+    .bajadas{
+        min-width: 40%;
+        align-content: center;
+        justify-content:space-evenly;
+        font-size: 3.2vw;
+        padding: 2%;
+        margin: 1%;
+        gap: 7%;
+        box-shadow: none;
+    }
+
+    
+
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .parrafos{
+        font-size: 1.8vw;
+        line-height: 3.8vw;
+        margin-top: 6%;
+    }
+
+    .imgPerfil{
+        position:absolute;
+        top: 80px;
+        left: 5vw;
+        width: 25%;
+    }
+
+    .titulo{
+        right: 0;
+        width: 60%;
+        align-self: end;
+    }
+
+    .enfoque{
+        right: 0px;
+        width: 60%;
+        align-self: end;
+    }
+
+    .textoHola{
+        position:relative;
+    }
+
+    .imgSkills{
+        height: 7vw ;
+    }
+
+    .img-contacto{
+        width: 40%;
+    }
+    
+    .infoContacto input, textarea{
+        width: 90%;
+    }
+    
+    .formularioContact{
+        width: 60%;
+    }
+    
+    .contactoBtn{
+        width: 30%;
+        padding: 1%;
+        font-weight: 500;
+        font-size: 2vw;
+    }
+    
+    .bajadas{
+        min-width: 40%;
+        align-content: center;
+        justify-content:space-evenly;
+        font-size: 2vw;
+        padding: 2%;
+        margin: 1%;
+        gap: 7%;
+        box-shadow: none;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .subtitulos, .enfoque{
+        font-size: 5.2vw;
+    }
+
+    .hola{
+        display: flex;
+        flex-direction: column;
+        padding: 5% 7%;
+    }
+
+    .herramientas{
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        justify-items: center;
+        padding: 5% 0;
+    }
+
+    .bajadas-textos{
+        display: none;
+    }
+
+    .pantalla-s{
+        border: none;
+        min-width: 20%;
+    }
+
+    .soft{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .formacionCard{
+        flex-direction: row;
+        width: 90%;
+        margin: 5%;
+        overflow: none;
+        box-shadow:none;
+        gap: 10%;
+    }
+    
+    .formacionCard img{
+        max-width: 30%;
+        transition: none;
+    }
+    
+    .formacionCard:hover img {
+        display: none;
+    }
+    
+    .formacionCard:hover {
+        display: none;
+    }
+    
+    .cardForm {
+        background: none;
+        height: auto;
+        opacity: 1;
+        padding: 1%;
+        position: relative;
+    }
+
+    .siglo, .alura, .domestika, .agencia, .egg{
+        background-color:#ffffff00;
+    }
+
+    .textFormacion{
+        color: #3F3E1C;
+    }
+
+    .btn-repositorio, .btn-demo{
+        font-size: 2.2vw;
+        margin: 10px 5px;
+        padding: 2%;
+        min-width: 40%;
     }
 
 }
