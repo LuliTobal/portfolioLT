@@ -30,7 +30,7 @@ a{
     text-align: justify;
     max-width: 100%;
     word-wrap: break-word;
-    line-height: 22px
+    line-height: 1.7vw
 }
 
 .textFormacion{
@@ -60,6 +60,13 @@ nav{
     z-index: 1000;
 }
 
+.hamburger{
+    font-size: 30px;
+    cursor: pointer;
+    color: #026756;
+    display: none;
+}
+
 .itemsNavBar{
     display: flex;
     justify-content: space-evenly;
@@ -81,7 +88,7 @@ nav a:hover{
 
 /* ////////////////////////////SECCION HOLA!/////////////////////////*/
 main{
-    margin-top: 7vh;
+    margin-top: 8vh;
     background: linear-gradient(#FFF9F9, #EEEED2);
 }
 
@@ -442,6 +449,7 @@ main{
 
     .parrafos{
         font-size: 3.2vw;
+        line-height: 3.8vw;
     }
 
     .imgPerfil{
@@ -541,14 +549,12 @@ main{
         box-shadow: none;
     }
 
-    
-
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
     .parrafos{
         font-size: 1.8vw;
-        line-height: 3.8vw;
+        line-height: 2.3vw;
         margin-top: 6%;
     }
 
@@ -614,6 +620,21 @@ main{
 @media only screen and (max-width: 900px) {
     .subtitulos, .enfoque{
         font-size: 5.2vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .itemsNavBar{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 35px;
+        left: 0;
+        background-color: #FFF9F9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .hola{
@@ -692,4 +713,15 @@ main{
         min-width: 40%;
     }
 
+}
+
+@media (min-width: 900px) and (max-width: 1200px){
+    .parrafos{
+        font-size: 2vw;
+        line-height: 2.4vw;
+    }
+
+    .bajadas{
+        font-size: 2.2vw;
+    }
 }

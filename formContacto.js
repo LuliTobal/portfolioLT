@@ -39,60 +39,21 @@ document.getElementById('formularioContact').addEventListener('submit', function
         event.preventDefault();
     }
 });
-   
-//     if(!errores) {
-//        limpiarFormContacto();
-//        Swal.fire({
-//            title: 'Enviando formulario...',
-//            timer: 2000,
-//            background: '#222222',
-//            customClass: {
-//              title: 'swal2-personalizar-texto',
-//            },
-//            didOpen: () => {
-//              Swal.showLoading();
-//            }
-//          }).then(() => {
-//            Swal.fire({
-//              icon: 'success',
-//              title: 'Formulario enviado!',
-//              confirmButtonText: 'Aceptar',
-//              background: '#222222',
-//              customClass: {
-//                title: 'swal2-personalizar-texto',
-//                confirmButton: 'swal2-personalizar-boton'
-//              }
-//             });
-//         });
-//     }
-// });
 
+document.getElementById('hamburger').addEventListener('click', function() {
+    const menu = document.getElementById('itemsNavBar');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+});
 
-// function limpiarFormLogin(){
-//    document.getElementById('formularioContact').value = '';
-//     document.getElementById('login-password').value = '';
-// }
-
-// function limpiarFormRegistro(){
-//    document.getElementById('nombre2').value = '';
-//    document.getElementById('apellido').value = '';
-//    document.getElementById('tel2').value = '';
-//    document.getElementById('direccion').value = '';
-//    document.getElementById('mail2').value = '';
-//    document.getElementById('usuario').value = '';
-//    document.getElementById('contrasenia1').value = '';
-//    document.getElementById('contrasenia2').value = '';
-// }
-
-// function limpiarFormContacto(){
-//    document.getElementById('nombre').value = '';
-//    document.getElementById('mail').value = '';
-//    document.getElementById('tel').value = '';
-//    document.getElementById('servicio').value = 0;
-//    document.getElementById('mensaje').value = '';
-//    var radios = document.querySelectorAll('input[name="source"]');
-//    for (var i = 0; i < radios.length; i++) {
-//        radios[i].checked = false;
-//    }
-//    document.getElementById('img_subir').value = '';
-// }
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('itemsNavBar');
+    if (window.innerWidth >= 900) {
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
+    }
+});
